@@ -1,0 +1,14 @@
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\bin\Debug\Entrega 3.exe.config
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\bin\Debug\Entrega 3.exe
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\bin\Debug\Entrega 3.pdb
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csprojResolveAssemblyReference.cache
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\MainWindow.g.cs
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\App.g.cs
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3_MarkupCompile.cache
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3_MarkupCompile.lref
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\MainWindow.baml
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.g.resources
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega_3.Properties.Resources.resources
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csproj.GenerateResource.Cache
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.exe
+c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.pdb
