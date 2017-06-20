@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace grupo_1
+
+
+namespace Entrega_3
 {
     public class Heroe
     {
@@ -116,6 +118,7 @@ namespace grupo_1
         public string Name;
         public int Cost;
 
+
         public Carta(string Name, int Cost)
         {
             this.Name = Name;
@@ -141,7 +144,10 @@ namespace grupo_1
         public int Vida;
         public string Nature;
         public int Disponible;
-        public Minions(string Name, int Cost, int Vida, int Ataque, string Nature, int Disponible)
+        public string Source;
+
+
+        public Minions(string Name, int Cost, int Vida, int Ataque, string Nature, int Disponible, string Source)
             : base(Name, Cost)
         {
             this.Name = Name;
@@ -149,7 +155,12 @@ namespace grupo_1
             this.Ataque = Ataque;
             this.Vida = Vida;
             this.Nature = Nature;
+            this.Source = Source;
             this.Disponible = Disponible;
+        }
+        public string EntregarSource()
+        {
+            return this.Source;
         }
         public int EntregarVida()
         {
@@ -162,6 +173,10 @@ namespace grupo_1
         public int EntregarDisponible()
         {
             return this.Disponible;
+        }
+        public string DarNombre()
+        {
+            return this.Name;
         }
         public override void Describir()
         {
@@ -243,7 +258,7 @@ namespace grupo_1
             }
 
         }
-        public void SacarCarta(Mazo mazito)
+        public Minions SacarCarta(Mazo mazito)
         {
             if (Manito.Count <= 10)
             {
@@ -251,14 +266,19 @@ namespace grupo_1
                 Manito.Add(mazito.EntregarCarta());
                 Console.WriteLine("sacaste : ");
                 mazito.EntregarCarta().Describir();
+
                 mazito.Borrar();
+                return mazito.EntregarCarta();
+
             }
-            if (Manito.Count > 10)
+            else
             {
                 Manito.Remove(mazito.EntregarCarta());
                 Console.WriteLine("tu mano esta muy llena, se ha borrado: ");
                 mazito.EntregarCarta().Describir();
                 mazito.Borrar();
+                return mazito.EntregarCarta();
+
             }
         }
 
@@ -1212,155 +1232,5 @@ namespace grupo_1
 
         }
     }
-    class MainClass
-    {
-        public static void Main(string[] args)
-        {
-            string jugador1;
-            string jugador2;
-            string Heroe1 = "";
-            string Heroe2 = "0";
-            Hunter Hunter1 = new Hunter("Rexxar", 30, "Steady Shot", 0);
-            Hunter Hunter2 = new Hunter("Rexxar", 30, "Steady Shot", 0);
-            Mazo m = new Mazo();
-            Mazo m2 = new Mazo();
-            Console.WriteLine("Ingrese el nombre del jugador 1: ");
-            jugador1 = Console.ReadLine();
-            Jugador p1 = new Jugador(jugador1, 1, 0, m2.mazito, 0, 0, Hunter1);
 
-            while (Heroe1 != "1" && Heroe1 != "2")
-            {
-                Console.WriteLine("Elija que Heroe desea usar :" + Environment.NewLine + "1.- Hunter" + Environment.NewLine + "2.- Warrior");
-                Heroe1 = Convert.ToString(Console.ReadLine());
-                if (Heroe1 == "1")
-                {
-                    p1.heroe.ArmaduraH = 0;
-                    p1.heroe.NombreH = "Rexxar";
-                    p1.heroe.PoderHeroe = "Steady Shot";
-                    p1.heroe.PtVida = 30;
-                }
-                else if (Heroe1 == "2")
-                {
-                    p1.heroe.ArmaduraH = 0;
-                    p1.heroe.NombreH = "Dieguito";
-                    p1.heroe.PoderHeroe = "Armor UP!";
-                    p1.heroe.PtVida = 30;
-                }
-                else
-                {
-                    Console.WriteLine("Porfavor ingrese una opción valida , [1 ó 2]");
-                }
-            }
-            Console.WriteLine(Environment.NewLine + "Bienvenido: " + jugador1 + Environment.NewLine + "Su Heroe es: " + p1.heroe.NombreH);
-            Console.WriteLine(Environment.NewLine + "Ingrese el nombre del jugador 2: ");
-            jugador2 = Console.ReadLine();
-            Jugador p2 = new Jugador(jugador2, 1, 0, m2.mazito, 0, 0, Hunter2);
-            while (Heroe2 != "1" && Heroe2 != "2")
-            {
-                Console.WriteLine("Elija que Heroe desea usar :" + Environment.NewLine + "1.- Hunter" + Environment.NewLine + "2.- Warrior");
-                Heroe2 = Convert.ToString(Console.ReadLine());
-
-                if (Heroe2 == "1")
-                {
-                    p2.heroe.ArmaduraH = 0;
-                    p2.heroe.NombreH = "Rexxar";
-                    p2.heroe.PoderHeroe = "Steady Shot";
-                    p2.heroe.PtVida = 30;
-                }
-                else if (Heroe2 == "2")
-                {
-                    p2.heroe.ArmaduraH = 0;
-                    p2.heroe.NombreH = "Dieguito";
-                    p2.heroe.PoderHeroe = "Armor UP!";
-                    p2.heroe.PtVida = 30;
-                }
-                else
-                {
-                    Console.WriteLine("Porfavor ingrese una opción valida , [1 ó 2]");
-                }
-            }
-            Console.WriteLine(Environment.NewLine + "Los jugadores son: " + Environment.NewLine + "Jugador 1 =>  " + jugador1 + "  y su Heroe -> " + p1.heroe.NombreH + Environment.NewLine + "Jugador 2 =>  " + jugador2 + "  y su Heroe-> " + p2.heroe.NombreH);
-            Console.WriteLine(Environment.NewLine);
-            Console.WriteLine("Empezó el juego! :" + Environment.NewLine);
-            Tablero t = new Tablero(p1, m.mazito);
-            Tablero t2 = new Tablero(p2, m2.mazito);
-            Minions wisp = new Minions("wisp", 0, 1, 1, "None", 0);
-            Minions murloc = new Minions("Murloc Raider", 1, 1, 2, "Murloc", 0);
-            Minions blood = new Minions("Bloodfen Raptor", 2, 2, 3, "Beast", 0);
-            Minions river = new Minions("River Crocolisk", 2, 3, 2, "Beast", 0);
-            Minions magma = new Minions("Magma Rager", 3, 1, 3, "Elemental", 0);
-            Minions chill = new Minions("chillwind Yeti", 4, 5, 4, "None", 0);
-            Minions oasis = new Minions("Oasis Snapjaw", 4, 7, 2, "Beast", 0);
-            Minions ogre = new Minions("Boulderfist Ogre", 6, 7, 6, "None", 0);
-            Minions golem = new Minions("War Golem", 7, 7, 7, "None", 0);
-            Minions hound = new Minions("Core Hound", 7, 5, 9, "Beast", 0);
-            Jugar j1 = new Jugar();
-            Console.Write("Presione enter para repartir las cartas!");
-            Console.ReadLine();
-            m.AgregarCarta(wisp);
-            m.AgregarCarta(blood);
-            m.AgregarCarta(blood);
-            m.AgregarCarta(blood);
-            m.AgregarCarta(chill);
-            m.AgregarCarta(chill);
-            m.AgregarCarta(chill);
-            m.AgregarCarta(golem);
-            m.AgregarCarta(golem);
-            m.AgregarCarta(golem);
-            m.AgregarCarta(hound);
-            m.AgregarCarta(hound);
-            m.AgregarCarta(hound);
-            m.AgregarCarta(magma);
-            m.AgregarCarta(magma);
-            m.AgregarCarta(magma);
-            m.AgregarCarta(murloc);
-            m.AgregarCarta(murloc);
-            m.AgregarCarta(murloc);
-            m.AgregarCarta(oasis);
-            m.AgregarCarta(oasis);
-            m.AgregarCarta(oasis);
-            m.AgregarCarta(ogre);
-            m.AgregarCarta(ogre);
-            m.AgregarCarta(ogre);
-            m.AgregarCarta(river);
-            m.AgregarCarta(river);
-            m.AgregarCarta(river);
-            m.AgregarCarta(wisp);
-            m.AgregarCarta(wisp);
-            m2.AgregarCarta(blood);
-            m2.AgregarCarta(blood);
-            m2.AgregarCarta(blood);
-            m2.AgregarCarta(chill);
-            m2.AgregarCarta(chill);
-            m2.AgregarCarta(chill);
-            m2.AgregarCarta(golem);
-            m2.AgregarCarta(golem);
-            m2.AgregarCarta(golem);
-            m2.AgregarCarta(hound);
-            m2.AgregarCarta(hound);
-            m2.AgregarCarta(hound);
-            m2.AgregarCarta(magma);
-            m2.AgregarCarta(magma);
-            m2.AgregarCarta(magma);
-            m2.AgregarCarta(murloc);
-            m2.AgregarCarta(murloc);
-            m2.AgregarCarta(murloc);
-            m2.AgregarCarta(oasis);
-            m2.AgregarCarta(oasis);
-            m2.AgregarCarta(oasis);
-            m2.AgregarCarta(ogre);
-            m2.AgregarCarta(ogre);
-            m2.AgregarCarta(ogre);
-            m2.AgregarCarta(river);
-            m2.AgregarCarta(river);
-            m2.AgregarCarta(river);
-            m2.AgregarCarta(wisp);
-            m2.AgregarCarta(wisp);
-            m2.AgregarCarta(wisp);
-            j1.Turno(p1, m, p2, m2, t, t2);
-            Console.ReadKey();
-
-
-        }
-    }
 }
