@@ -12,17 +12,5 @@ c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\En
 c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csproj.GenerateResource.Cache
 c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.exe
 c:\users\carmenpaztorresprade\documents\visual studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.pdb
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\bin\Debug\Entrega 3.exe.config
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\bin\Debug\Entrega 3.exe
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\bin\Debug\Entrega 3.pdb
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csprojResolveAssemblyReference.cache
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\MainWindow.g.cs
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\App.g.cs
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3_MarkupCompile.cache
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3_MarkupCompile.lref
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\MainWindow.baml
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.g.resources
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega_3.Properties.Resources.resources
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csproj.GenerateResource.Cache
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.exe
-C:\Users\crist\Documents\Visual Studio 2017\Projects\Entrega 3\Entrega 3\obj\Debug\Entrega 3.pdb
+C:\Users\ing-27\Desktop\grupo_1-master\bin\Debug\Entrega 3.exe.config
+C:\Users\ing-27\Desktop\grupo_1-master\obj\Debug\Entrega 3.pdb
